@@ -1,7 +1,7 @@
-import Header from './Header'
-import Hero from './Hero'
-import Benefits from './Benefits'
-import Works from './Works'
+
+import Main from './Main'
+
+
 import Calculator from './Calculator'
 
 import './App.css'
@@ -15,10 +15,10 @@ function App() {
   return (
     <div className="App">
       
-      <Header />
-      <Hero />
-      <Benefits />
-      <Works />
+      
+      <Main />
+     
+   
       <Calculator />
       
       

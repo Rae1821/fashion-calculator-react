@@ -6,6 +6,19 @@ export default function Header() {
     return (
         <header className="header">
         
+        <div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation">
+                    <li><a href="index.html" alt="home">home</a></li>
+                    <li><a href="index.html" alt="home">benefits</a></li>
+                    <li><a href="index.html" alt="home">how it works</a></li>
+                    <li><a href="index.html" alt="home">start here</a></li>
+                </ul>
+            </nav>
+        </div>
 
             <nav>
                 <ul className="nav--list--1">
@@ -22,8 +35,8 @@ export default function Header() {
                     <div className="line--right--fill"></div>
                 </div>
                 <ul className="nav--list--2">
-                    <li>tips</li>
-                    <li className="calc--link"><a href="#calculator">calculator</a></li>
+                    <li>how it works</li>
+                    <li>calculate</li>
                 </ul>
             </nav>
         </header>

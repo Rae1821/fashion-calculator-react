@@ -154,7 +154,7 @@ nav {
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('./images/fashion-bg.jpg');
   background-position: center center;
   background-size: cover;
-
+  padding-bottom: 2em;
 }
 
 .hero--content {
@@ -175,7 +175,7 @@ nav {
 
 .hero--content > h1.title {
   font-family: var(--ff-display);
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 1.2px;
   line-height: 1.15;
   margin-bottom: .75em;
@@ -192,14 +192,6 @@ h1.title > span {
   margin-bottom: 2em;
 }
 
-
-.hero--img--container {
-  width: 40%;
-}
-
-.hero--img {
-  width: 100%;
-}
 
 .start--btn {
   font-family: var(--ff-sans);
@@ -226,7 +218,6 @@ h1.title > span {
   }
 
   .hero--content {
-    width: 50%;
     text-align: left;
   }
 
@@ -241,7 +232,7 @@ h1.title > span {
   }
 
   .start--btn {
-    width: 50%;
+    width: 30%;
     border-radius: 10px;
   }
 }
@@ -251,15 +242,36 @@ h1.title > span {
 
 .benefits {
   padding: 2em 1em;
-  margin: 2em auto;
+  margin: 8em auto;
 }
 
 .benefits > h2 {
   font-family: var(--ff-display);
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   letter-spacing: 1.2px;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
+
+.arrow-container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding-bottom: 2em;
+}
+
+.arrow-middle {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.arrow-left,
+.arrow-right { 
+  display: none;
+}
+
+
+
 
 .benefits--container { 
   margin: 3em auto;
@@ -268,10 +280,11 @@ h1.title > span {
   align-items: center;
   justify-content: center;
   width: 90%;
+  max-width: 1300px;
 }
 
 .vertical--line {
-  height: 50px;
+  height: 80px;
   width: 1px;
   position: relative;
   min-height: 10px;
@@ -286,13 +299,6 @@ h1.title > span {
   bottom: 0;
   background-color: var(--clr-black);
   margin: 0 auto;
-}
-
-.benefits--container > h3 {
-  font-family: var(--ff-bebas);
-  letter-spacing: 1.2px;
-  padding-bottom: 1em;
-  font-size: 1.5rem;
 }
 
 .benefit-1,
@@ -375,12 +381,25 @@ h1.title > span {
   margin-top: 8em;
 }
 
+/*** Benefits Media Queries ***/
+
+
 @media (min-width: 800px) {
   .benefits--container {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
+  }
+
+  .benefits > h2 {
+    font-size: 3rem;
+  }
+
+  .benefit-1 > h3,
+  .benefit-2 > h3,
+  .benefit-3 > h3 {
+    font-size: 2rem;
   }
 
   .benefit-1,
@@ -398,63 +417,128 @@ h1.title > span {
   }
 }
 
+@media (min-width: 1200px) {
+  .arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  
+  .arrow-left,
+  .arrow-middle,
+  .arrow-right {
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+
 /********** Works Styles **********/
 
 .works--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin: 0 auto;
+  margin: 3em auto 0;
+  padding: 3em 0 0;
 }
 
-.works--container > h2 {
+.works-left {
+  width: 45%;
+}
+
+.works-left > img {
+  width: 100%;
+}
+
+.works-right {
+  width: 50%;
+  padding: 0 1em;
+}
+
+.works > h2 {
   font-family: var(--ff-display);
   letter-spacing: 1.2px;
   padding-bottom: 1em;
 }
 
 .works > p {
-  width: 90%;
-  text-align: left;
-  margin: 0 auto 4em;
+ max-width: 80%;
+ margin: 0 auto;
 }
 
-.works > h3 {
+
+/******** Measuring Tips *************/
+
+.measuring-tips {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tips-right {
+  width: 55%;
+}
+
+.tips-right > img {
+  width: 100%;
+}
+
+.tips-left {
+  width: 40%;
+}
+
+.measuring-tips > h3 {
   font-family: var(--ff-bebas);
-  letter-spacing: 1.1px;
+  letter-spacing: 1.58px;
+  color: var(--clr-black);
+  font-size: 1.25rem;
 }
 
+.tips {
+  list-style-type:decimal-leading-zero;
+  
+  line-height: 2;
+  text-align: left;
+  margin: 1em auto 3em;
+  color: var(--clr-black);
+  max-width: 80%;
+}
+
+.tips > li::marker {
+  color: var(--clr-brightyellow);
+}
 
 
 /******** Calculator Styles *************/
 
 
-.calculator--form--container {
+.buttonBox {
+  width: 100%;
+  height: calc(100% - 110px);
+  display: grid;
+}
+
+.calculator-container {
+  
+}
+
+.calculator-form-container {
+  background-color: rgba(242,112,82,.76);
+  height: 500px;
+  padding: 3em 0;
+}
+
+.calculator-form {
+  width: 350px;
+  height: 450px;
   background-color: var(--clr-green);
-  box-shadow: 5px 5px 5px var(--clr-brightyellow);
-  width: 90%;
-  height: 400px;
-  margin: 0 auto 6em;
-  padding: 2em 0.5em 5em;
-}
-
-.calculator--form--container > h3 {
-  font-family: var(--ff-bebas);
-  letter-spacing: 1.58px;
-  color: #F2F2F2;
-  font-size: 1.25rem;
-}
-
-.measuring--tips {
-  list-style-type:decimal-leading-zero;
-  font-size: 0.75rem;
-  line-height: 2;
-  text-align: left;
-  margin: 1em auto 3em;
-  color: var(--clr-white);
-  max-width: 80%;
-}
-
-.measuring--tips > li::marker {
-  color: var(--clr-brightyellow);
+  margin: 2em auto;
+  padding: 2em .5em 0;
+  border-radius: 10px;
 }
 
 form {
