@@ -1,5 +1,5 @@
-import calcImg from './images/calculator-img.jpg';
-
+import greenCalc from './images/green-calc.jpg'
+import tapeImg from './images/measuring-tape.png'
 
 export default function Main() {
 
@@ -19,9 +19,11 @@ export default function Main() {
                      Knowing your body shape is the first step to looking better in your clothes. No more feeling overwhelemed while shopping for clothes and getting dressed will be a breeze.
                      Ready to get started?
                      </p>
-                    <button className="start--btn">
-                        Calculate My Shape!
-                    </button>
+                     <a href="#calculator-form" alt="calculator link">
+                        <button className="start--btn">
+                            Calculate My Shape!
+                        </button>
+                    </a>
                 </div>
             </div> 
             
@@ -45,8 +47,8 @@ export default function Main() {
                 <div className="benefits--container">
                     <div className="benefit-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F2CB05" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                    <h3>Clarity</h3>
-                    <p>Have you ever bought something you saw an influencer on IG wearing only to realize it looks terrible on you? The reality is that clothes look different on different people because their shapes are not the same.</p>
+                        <h3>Clarity</h3>
+                        <p>Have you ever bought something you saw an influencer on IG wearing only to realize it looks terrible on you? The reality is that clothes look different on different people because their shapes are not the same.</p>
                     </div>
 
                     <div className="benefit-2">
@@ -68,12 +70,9 @@ export default function Main() {
             }
             <div id="works" className="works--container">
                 <div className="works-left">
-                    <img className="calculator-img" src={calcImg} alt="calculator" />
-                </div>
-                <div className="works-right">
-                    <div className="works">
+                <div className="works">
                         <h2>How It Works</h2>
-                            <p>The way the calculator determines your body shape is by comparing 
+                            <p class="works-p">The way the calculator determines your body shape is by comparing 
                             3 main body measurements: your shoulders, your waist, and your hips. The 
                             calculator then compares these measurements against each other and tells
                             you your body shape! 
@@ -86,9 +85,84 @@ export default function Main() {
                             </p>
                     </div>
                 </div>
+                <div className="works-right">
+                    <img className="calculator-img" src={greenCalc} alt="calculator" />
+                </div>
             </div>
 
+            {
+                // large quote section 
+            }
 
+            <div class="quote">
+                <h2>You can have anything you want in life if you dress for it</h2>
+                <p>Edith Head</p>
+            </div>
+
+            {
+                //measuring tips section
+            }
+
+            <div className="measuring-tips">
+                <div className="tips-left">
+                
+                    <img src={tapeImg} alt="measuring tape" />
+                </div>
+                <div className="tips-right">
+                    <h2>Measuring Tips</h2>
+                    <div className="tips">
+                        <h3>Step 1</h3>
+                            <p>Look into a full length mirror or get someone 
+                            to assist you</p>
+                        <h3>Step 2</h3>
+                            <p>Wrap the tape measure around the fullest 
+                            part of each area, making sure you keep the tape 
+                            horizontal to the floor. This will give you the
+                            most accurate results.</p>
+                        <h3>Step 3</h3>
+                            <p>If you are between whole sizes, round up or down to the nearest
+                            whole number.</p>
+                    </div>
+                </div>
+            </div>
+
+            {
+                //Testimonials
+            }
+
+            <div className="testimonials-container">
+                <h2>Testimonials</h2>
+                <div className="testimonial-wrapper">
+                    <div className="testimonial">
+                        <p>"Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit, sed do eiusmod tempor incididunt ut lab
+                            ore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                            commodo consequat. Duis aute irure dolor in dolor."
+                        </p>
+                        <p className="author">-Betty Sue</p>
+                    </div>
+                    <div className="testimonial">
+                        <p>"Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit, sed do eiusmod tempor incididunt ut lab
+                            ore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                            commodo consequat. Duis aute irure dolor in dolor."
+                        </p>
+                        <p className="author">-Tiffany White</p>
+                    </div>
+                    <div className="testimonial">
+                        <p>
+                            "Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit, sed do eiusmod tempor incididunt ut lab
+                            ore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                            commodo consequat. Duis aute irure dolor in dolor."
+                        </p>
+                        <p className="author">-Rebecca Johnson</p>
+                    </div>
+                </div>
+            </div>
 
 
 

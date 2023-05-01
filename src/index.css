@@ -27,6 +27,10 @@ body {
   color: var(--clr-black);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -35,6 +39,7 @@ code {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
@@ -158,7 +163,7 @@ nav {
 }
 
 .hero--content {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   color: white;
@@ -180,6 +185,7 @@ nav {
   line-height: 1.15;
   margin-bottom: .75em;
   margin-top: .25em;
+  text-shadow: 0px 0px 4px darkslategrey;
 }
 
 h1.title > span {
@@ -188,7 +194,7 @@ h1.title > span {
 
 .hero--content > p.description {
   line-height: 2;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-bottom: 2em;
 }
 
@@ -247,14 +253,14 @@ h1.title > span {
 
 .benefits > h2 {
   font-family: var(--ff-display);
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   letter-spacing: 1.2px;
   font-size: 2.25rem;
 }
 
 .arrow-container {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 600px;
   padding-bottom: 2em;
 }
 
@@ -269,9 +275,6 @@ h1.title > span {
 .arrow-right { 
   display: none;
 }
-
-
-
 
 .benefits--container { 
   margin: 3em auto;
@@ -328,7 +331,7 @@ h1.title > span {
 
 .benefit-1 {
   border: 3px solid var(--clr-brightyellow);
-  box-shadow: 12px 12px 0px var(--clr-brightyellow);
+  box-shadow: 10px 10px 0px var(--clr-brightyellow);
 }
 
 .benefit-1:hover {
@@ -338,7 +341,7 @@ h1.title > span {
 
 .benefit-2 {
   border: 3px solid var(--clr-green);
-  box-shadow: 12px 12px 0px var(--clr-green);
+  box-shadow: 10px 10px 0px var(--clr-green);
   margin: 4em 0;
 }
 
@@ -349,7 +352,7 @@ h1.title > span {
 
 .benefit-3 {
   border: 3px solid var(--clr-yellow);
-  box-shadow: 12px 12px 0px var(--clr-yellow);
+  box-shadow: 10px 10px 0px var(--clr-yellow);
 }
 
 .benefit-3:hover {
@@ -389,23 +392,33 @@ h1.title > span {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 90%;
   }
 
   .benefits > h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .benefit-1 > h3,
   .benefit-2 > h3,
   .benefit-3 > h3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin: .5em 0 1em;
+  }
+
+  .benefit-1 > p,
+  .benefit-2 > p,
+  .benefit-3 > p {
+    font-size: 1.1rem;
+    padding: 0 1em;
+    text-align: left;
   }
 
   .benefit-1,
   .benefit-2,
   .benefit-3 {
-    width: 30%;
+    width: 25%;
+    height: 400px;
   }
 
   .benefit-2 {
@@ -439,35 +452,72 @@ h1.title > span {
 
 .works--container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin: 3em auto 0;
-  padding: 3em 0 0;
+  padding: 9em 0;
+  background-color: #467E82;
 }
 
 .works-left {
-  width: 45%;
+  width: 40%;
 }
 
-.works-left > img {
+.works-right > img {
   width: 100%;
+  transform: rotate(90deg);
+  border-radius: 25px;
+  margin-left: 10px;
 }
 
 .works-right {
-  width: 50%;
-  padding: 0 1em;
+  width: 30%;
 }
 
 .works > h2 {
   font-family: var(--ff-display);
+  font-size: 2.25rem;
   letter-spacing: 1.2px;
   padding-bottom: 1em;
+  color: white;
 }
 
-.works > p {
- max-width: 80%;
+.works-p {
+ max-width: 400px;
  margin: 0 auto;
+ color: white;
+ text-align: left;
+ font-size: 1.15rem;
+}
+
+/******** Quote Section *************/
+
+.quote {
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,0.5)),
+  url('images/girl-yellow-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quote > h2 {
+  font-family: var(--ff-bebas);
+  color: white;
+  font-size: 3rem;
+  max-width: 800px;
+  letter-spacing: 1.4px;
+  line-height: 1.5;
+  text-shadow: 0px 0px 4px black;
+}
+
+.quote > p {
+  color: var(--clr-white);
 }
 
 
@@ -477,39 +527,52 @@ h1.title > span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #09474B;
+  height: 800px;
 }
 
 .tips-right {
-  width: 55%;
-}
-
-.tips-right > img {
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .tips-left {
-  width: 40%;
+  width: 50%;
 }
 
-.measuring-tips > h3 {
-  font-family: var(--ff-bebas);
-  letter-spacing: 1.58px;
-  color: var(--clr-black);
-  font-size: 1.25rem;
+.tips-left > img {
+  width: 80%;
+}
+
+.tips-right > h2 {
+  font-family: var(--ff-display);
+  letter-spacing: 1.5px;
+  color: var(--clr-white);
+  font-size: 2.25rem;
+  text-shadow: 0px 0px 4px black;
+  max-width: 500px;
+  padding-bottom: 1em;
 }
 
 .tips {
-  list-style-type:decimal-leading-zero;
-  
   line-height: 2;
   text-align: left;
   margin: 1em auto 3em;
-  color: var(--clr-black);
-  max-width: 80%;
+  color: var(--clr-white);
 }
 
-.tips > li::marker {
-  color: var(--clr-brightyellow);
+.tips > h3 {
+  font-size: 1.75rem;
+  font-family: var(--ff-bebas);
+  letter-spacing: 1.3px;
+  color: var(--clr-white);
+}
+
+.tips > p {
+  font-size: 1.2rem;
+  max-width: 500px;
+  margin-bottom: 1em;
+ 
 }
 
 
@@ -520,10 +583,20 @@ h1.title > span {
   width: 100%;
   height: calc(100% - 110px);
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
-.calculator-container {
-  
+button {
+  border: none;
+  background-color: var(--clr-green);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255);
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+
 }
 
 .calculator-form-container {
@@ -595,3 +668,59 @@ label {
 .calculate--btn:hover {
   transform: translateY(-5px);
 }
+
+/*** Testimonials Section ***/
+
+.testimonials-container {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/girl-yellow-shirt.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.testimonials-container > h2 {
+  font-family: var(--ff-display);
+  font-size: 2.25rem;
+  color: var(--clr-yellow);
+  margin-bottom: 2em;
+  text-shadow: 0px 0px 4px black;
+  letter-spacing: 1.2px;
+}
+
+.testimonial-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--clr-white);
+}
+
+.testimonial {
+  width: 20%;
+  border: 1px solid white;
+  text-align: left;
+  padding: 2em;
+  height: 400px;
+}
+
+.testimonial:nth-child(2) {
+  margin: 0 3em;
+}
+
+.testimonial > p {
+  font-size: 1.12em;
+}
+
+.testimonial > p.author {
+  color: var(--clr-yellow);
+  margin-top: 2em;
+}
+
+
+
+
+

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import tapeImg from './images/tape-yellow-bg.jpg'
+import Button from './Button'
 
 
 export default function Calculator() {
@@ -44,23 +44,8 @@ export default function Calculator() {
     return (
         
         <div className="calculator-container">
-            <div className="measuring-tips">
-                <div className="tips-left">
-                    <h3>Tips for measuring correctly</h3>
-                            <ul className="tips">
-                                <li>Look into a full length mirror or get someone to assist you</li>
-                                <li>Wrap the tape measure around the fullest part of each area, making sure you keep the tape horizontal to the floor</li>
-                                <li>Measuring around the fullest part will ensure you have the most accurate results</li>
-                            </ul>
-                </div>
-                <div className="tips-right">
-                    <img src={tapeImg} alt="measuring tape" />
-                </div>
-               
-            </div>
-            
             <div className="calculator-form-container">
-                <div className="calculator-form">
+                <div className="calculator-form" id="calculator-form">
                     <form onSubmit={handleSubmit}>
                         <h4>Enter Your Measurements</h4>
                             <div className="form--element">
@@ -90,8 +75,10 @@ export default function Calculator() {
                                     onChange={handleChange}
                                     />
                             </div>
-                        <button className="calculate--btn" >Calculate my shape!</button>
                     </form>
+                    <div className="button-wrapper">
+                        <Button />
+                    </div>
                 </div>
             </div>
 
