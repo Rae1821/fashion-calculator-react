@@ -7,11 +7,14 @@
   --ff-bebas: 'Bebas Neue', cursive;
 
   --clr-orange: #F27052;
-  --clr-pink: #F2A999;
+  --clr-pink: #FA0268;
   --clr-yellow: #F2B807;
-  --clr-green: #088C7F;
-  --clr-black: #373737;
-  --clr-brightyellow: #F2CB05;
+  /* --clr-green: #088C7F; */
+  --clr-green: #21A5AA;
+  --clr-black: #011526;
+  /* --clr-black: #373737; */
+  /* --clr-brightyellow: #F2CB05; */
+  --clr-brightyellow: #FAB10F;
   --clr-white: #F2F2F2;
 
 
@@ -252,7 +255,8 @@ h1.title > span {
 }
 
 .benefits > h2 {
-  font-family: var(--ff-display);
+  font-family: var(--ff-sans);
+  font-weight: 800;
   margin-bottom: 1.5em;
   letter-spacing: 1.2px;
   font-size: 2.25rem;
@@ -309,8 +313,8 @@ h1.title > span {
 .benefit-3 {
   padding: 1.5em;
   border-radius: 3px;
-  box-shadow: 2px 5px 10px #ccc;
   max-width: 325px;
+  transition: box-shadow .525s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .benefit-1 > p,
@@ -330,34 +334,28 @@ h1.title > span {
 }
 
 .benefit-1 {
-  border: 3px solid var(--clr-brightyellow);
-  box-shadow: 10px 10px 0px var(--clr-brightyellow);
+  border: 2px solid var(--clr-pink);
 }
 
 .benefit-1:hover {
-  transform: translateY(5px);
-  box-shadow: 2px 2px 0px var(--clr-brightyellow);
+  box-shadow: 12px 12px var(--clr-pink);
 }
 
 .benefit-2 {
-  border: 3px solid var(--clr-green);
-  box-shadow: 10px 10px 0px var(--clr-green);
+  border: 2px solid var(--clr-green);
   margin: 4em 0;
 }
 
 .benefit-2:hover {
-  transform: translateY(5px);
-  box-shadow: 2px 2px 0px var(--clr-green);
+  box-shadow: 12px 12px var(--clr-green);
 }
 
 .benefit-3 {
-  border: 3px solid var(--clr-yellow);
-  box-shadow: 10px 10px 0px var(--clr-yellow);
+  border: 3px solid var(--clr-brightyellow);
 }
 
 .benefit-3:hover {
-  transform: translateY(5px);
-  box-shadow: 2px 2px 0px var(--clr-yellow);
+  box-shadow: 12px 12px var(--clr-brightyellow);
 }
 
 .vertical--line--bottom {
@@ -447,50 +445,6 @@ h1.title > span {
   }
 }
 
-
-/********** Works Styles **********/
-
-.works--container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 3em auto 0;
-  padding: 9em 0;
-  background-color: #467E82;
-}
-
-.works-left {
-  width: 40%;
-}
-
-.works-right > img {
-  width: 100%;
-  transform: rotate(90deg);
-  border-radius: 25px;
-  margin-left: 10px;
-}
-
-.works-right {
-  width: 30%;
-}
-
-.works > h2 {
-  font-family: var(--ff-display);
-  font-size: 2.25rem;
-  letter-spacing: 1.2px;
-  padding-bottom: 1em;
-  color: white;
-}
-
-.works-p {
- max-width: 400px;
- margin: 0 auto;
- color: white;
- text-align: left;
- font-size: 1.15rem;
-}
-
 /******** Quote Section *************/
 
 .quote {
@@ -499,7 +453,7 @@ h1.title > span {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 800px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -509,15 +463,104 @@ h1.title > span {
 .quote > h2 {
   font-family: var(--ff-bebas);
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   max-width: 800px;
   letter-spacing: 1.4px;
   line-height: 1.5;
   text-shadow: 0px 0px 4px black;
+  padding: 1em;
 }
 
 .quote > p {
   color: var(--clr-white);
+}
+
+@media (min-width: 900px) {
+
+  .quote {
+    height: 800px;
+  }
+
+  .quote > h2 {
+    font-size: 3rem;
+  }
+}
+
+
+/********** Works Styles **********/
+
+.works--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+
+.works-left {
+  width: 100%;
+}
+
+.works-right > img {
+  max-width: 100%;
+}
+
+.works-right {
+  width: 100%;
+}
+
+
+.works > h2 {
+  font-family: var(--ff-sans);
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 1em 0;
+  color: var(--clr-black);
+}
+
+.works-p {
+ max-width: 400px;
+ margin: 0 auto;
+ color: var(--clr-black);
+ text-align: left;
+ font-size: 1.15rem;
+ padding-bottom: 2em;
+}
+
+@media (min-width: 900px) {
+
+  .works--container {
+    flex-direction: row;
+  }
+
+  .works-left {
+    width: 50%;
+  }
+
+  .works-right {
+    width: 50%;
+  }
+
+  img.calculator-img {
+    display: block;
+    width: 100%;
+    height: 600px;
+  }
+
+  .works {
+    height: 600px;
+  }
+
+  .works > h2 {
+    font-size: 2.25rem;
+    padding-top: 2em;
+  }
+
+  .works-p {
+    font-size: 1rem;
+    padding-bottom: 3em;
+  }
+
 }
 
 
@@ -527,91 +570,123 @@ h1.title > span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #09474B;
-  height: 800px;
-}
-
-.tips-right {
-  width: 50%;
-  margin: 0 auto;
-}
-
-.tips-left {
-  width: 50%;
-}
-
-.tips-left > img {
-  width: 80%;
+  flex-direction: column;
+  filter: brightness(.7);
 }
 
 .tips-right > h2 {
-  font-family: var(--ff-display);
-  letter-spacing: 1.5px;
-  color: var(--clr-white);
-  font-size: 2.25rem;
-  text-shadow: 0px 0px 4px black;
+  font-family: var(--ff-sans);
+  font-weight: 800;
+  color: var(--clr-black);
+  font-size: 2rem;
+  /* text-shadow: 0px 0px 4px black; */
   max-width: 500px;
-  padding-bottom: 1em;
+  padding: 1em 0;
+  margin: 0 auto;
 }
 
 .tips {
   line-height: 2;
   text-align: left;
-  margin: 1em auto 3em;
-  color: var(--clr-white);
+  margin: 0 auto;
+  color: var(--clr-black);
+  padding: 0 2em 1.5em;
+  max-width: 400px;
 }
 
 .tips > h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-family: var(--ff-bebas);
   letter-spacing: 1.3px;
-  color: var(--clr-white);
+  color: var(--clr-black);
 }
 
 .tips > p {
   font-size: 1.2rem;
-  max-width: 500px;
-  margin-bottom: 1em;
- 
+  max-width: 400px;
+  padding-bottom: 1em;
+}
+
+.tips-left > img {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+
+  .measuring-tips {
+    flex-direction: row;
+  }
+
+  .tips-right > h2 {
+    font-size: 2.25rem;
+    padding-top: 2em;
+  }
+
+  .tips-right {
+    width: 50%;
+    height: 600px;
+  }
+
+  .tips-left {
+    width: 50%;
+  }
+
+  .tips-left > img {
+    width: 100%;
+    height: 600px;
+  }
+
+  .tips > h3 {
+    font-size: 1.25rem;
+  }
+
+  .tips > p {
+    font-size: 1rem;
+  }
 }
 
 
 /******** Calculator Styles *************/
 
-
-.buttonBox {
-  width: 100%;
-  height: calc(100% - 110px);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
+.calculator-container {
+  background-color:rgba(164, 194, 196,.55);
+  padding-bottom: 5em;
 }
 
-button {
-  border: none;
-  background-color: var(--clr-green);
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255);
-  cursor: pointer;
-  border-radius: 10px;
-  outline: none;
-
+.calculator-container > h2 {
+  font-family: var(--ff-display);
+  padding-top: 3em;
+  font-size: 2.5rem;
+  color: var(--clr-black);
+  letter-spacing: 1.3px;
 }
 
 .calculator-form-container {
-  background-color: rgba(242,112,82,.76);
-  height: 500px;
-  padding: 3em 0;
+  position: relative;
+  height: 600px;
+  padding: 0 0 3em;
+}
+
+.blob {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
 }
 
 .calculator-form {
-  width: 350px;
-  height: 450px;
+  position: absolute;
+  top: 30%;
+  right: 38%;
+  width: 325px;
+  height: 275px;
   background-color: var(--clr-green);
-  margin: 2em auto;
   padding: 2em .5em 0;
   border-radius: 10px;
+  z-index: 9999;
+  box-shadow: 1px 1px 4px var(--clr-green);
 }
 
 form {
@@ -623,6 +698,7 @@ form > h4 {
   font-family: var(--ff-display);
   letter-spacing: 1.5px;
   font-size: 1.125rem;
+  margin-bottom: 1em;
 }
 
 .form--element {
@@ -634,7 +710,7 @@ form > h4 {
 }
 
 input {
-  width: 50%;
+  width: 45%;
   border: none;
   box-shadow: inset -10px -10px 15px rgba(8,140,127,0.2),
               inset 10px 10px 15px rgba(8,140,127,0.12);
@@ -648,63 +724,62 @@ input:focus {
 
 label {
   font-family: var(--ff-sans);
-  text-transform: uppercase;letter-spacing: 1.3px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
   color: var(--clr-white);
+  justify-self: end;
 }
 
-.calculate--btn {
-  margin-top: 3em;
-  background-color: var(--clr-brightyellow);
-  box-shadow: 3px 3px 5px var(--clr-brightyellow);
+.calculate-btn {
+  margin-top: 1em;
+  background-color: var(--clr-pink);
+  color: var(--clr-white);
+  text-shadow: 0px 0px rgba(0,0,0,0.8);
   border: none;
-  padding: .5em 2em;
+  padding: .25em 2em;
   border-radius: 8px;
-  width: 70%;
-  font-family: var(--ff-sans);
-  text-transform: uppercase;
+  width: 80%;
+  font-family: var(--ff-bebas);
+  font-size: 1.25rem;
   letter-spacing: 2px;
+  cursor: pointer;
+  transition: box-shadow .525s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .calculate--btn:hover {
-  transform: translateY(-5px);
+  box-shadow: 12px 12px var(--clr-brightyellow);
 }
 
 /*** Testimonials Section ***/
 
 .testimonials-container {
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/girl-yellow-shirt.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
-  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 5em 0;
 }
 
 .testimonials-container > h2 {
-  font-family: var(--ff-display);
+  font-family: var(--ff-sans);
+  font-weight: 800;
   font-size: 2.25rem;
-  color: var(--clr-yellow);
+  color: var(--clr-black);
   margin-bottom: 2em;
-  text-shadow: 0px 0px 4px black;
-  letter-spacing: 1.2px;
 }
 
 .testimonial-wrapper {
    display: flex;
    justify-content: center;
    align-items: center;
-   color: var(--clr-white);
+   flex-direction: column;
+   color: var(--clr-black);
 }
 
 .testimonial {
-  width: 20%;
-  border: 1px solid white;
-  text-align: left;
+  width: 80%;
   padding: 2em;
-  height: 400px;
 }
 
 .testimonial:nth-child(2) {
@@ -712,15 +787,35 @@ label {
 }
 
 .testimonial > p {
-  font-size: 1.12em;
+  font-size: 1rem;
 }
 
 .testimonial > p.author {
-  color: var(--clr-yellow);
+  color: var(--clr-black);
+  font-weight: 800;
   margin-top: 2em;
 }
 
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 2em;
+}
 
 
+@media (min-width: 900px) {
 
+  .testimonial-wrapper {
+    flex-direction: row;
+  }
 
+  .testimonial {
+    width: 20%;
+  }
+
+  .testimonial > p {
+    font-size: 1.12em;
+  }
+
+}

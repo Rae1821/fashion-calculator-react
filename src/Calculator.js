@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import Button from './Button'
-
+import blobAnimation from './images/blob-animation.svg'
 
 export default function Calculator() {
 
@@ -44,7 +43,9 @@ export default function Calculator() {
     return (
         
         <div className="calculator-container">
+            <h2>The Body Shape Calculator</h2>
             <div className="calculator-form-container">
+                <img className="blob" src={blobAnimation} alt="blob background"/>
                 <div className="calculator-form" id="calculator-form">
                     <form onSubmit={handleSubmit}>
                         <h4>Enter Your Measurements</h4>
@@ -75,10 +76,9 @@ export default function Calculator() {
                                     onChange={handleChange}
                                     />
                             </div>
+                           <button className="calculate-btn">Calculate</button>
                     </form>
-                    <div className="button-wrapper">
-                        <Button />
-                    </div>
+                   
                 </div>
             </div>
 

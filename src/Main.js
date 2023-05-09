@@ -1,5 +1,8 @@
-import greenCalc from './images/green-calc.jpg'
-import tapeImg from './images/measuring-tape.png'
+import pinkCalc from './images/pink-calculator.jpg'
+import appleTape from './images/tape-apple.jpg'
+import avatarOne from './images/reviewer-1.jpg'
+import avatarTwo from './images/reviewer-2.jpg'
+import avatarThree from './images/reviewer-3.jpg'
 
 export default function Main() {
 
@@ -64,7 +67,6 @@ export default function Main() {
                 </div>
             </div>
 
-
             {
                 //How it works section 
             }
@@ -72,10 +74,10 @@ export default function Main() {
                 <div className="works-left">
                 <div className="works">
                         <h2>How It Works</h2>
-                            <p class="works-p">The way the calculator determines your body shape is by comparing 
-                            3 main body measurements: your shoulders, your waist, and your hips. The 
-                            calculator then compares these measurements against each other and tells
-                            you your body shape! 
+                            <p class="works-p">The way the calculator takes in
+                            3 main body measurements: your <strong>shoulders</strong>, your <strong>waist</strong>, and your <strong>hips</strong>. The 
+                            calculator then compares these measurements against each other to determine
+                            the shape of your body! 
                             <br />
                             <br />
                             It's important to remember that all body shapes are beautiful and unique and 
@@ -86,17 +88,8 @@ export default function Main() {
                     </div>
                 </div>
                 <div className="works-right">
-                    <img className="calculator-img" src={greenCalc} alt="calculator" />
+                    <img className="calculator-img" src={pinkCalc} alt="calculator" />
                 </div>
-            </div>
-
-            {
-                // large quote section 
-            }
-
-            <div class="quote">
-                <h2>You can have anything you want in life if you dress for it</h2>
-                <p>Edith Head</p>
             </div>
 
             {
@@ -105,25 +98,35 @@ export default function Main() {
 
             <div className="measuring-tips">
                 <div className="tips-left">
-                
-                    <img src={tapeImg} alt="measuring tape" />
+                    <img src={appleTape} alt="apple and measuring tape" />
                 </div>
                 <div className="tips-right">
                     <h2>Measuring Tips</h2>
-                    <div className="tips">
-                        <h3>Step 1</h3>
-                            <p>Look into a full length mirror or get someone 
-                            to assist you</p>
-                        <h3>Step 2</h3>
-                            <p>Wrap the tape measure around the fullest 
-                            part of each area, making sure you keep the tape 
-                            horizontal to the floor. This will give you the
-                            most accurate results.</p>
-                        <h3>Step 3</h3>
-                            <p>If you are between whole sizes, round up or down to the nearest
-                            whole number.</p>
-                    </div>
+                        <div className="tips">
+                            <h3>Step 1</h3>
+                                <p>Look into a full length mirror or get someone 
+                                to assist you</p>
+                            <h3>Step 2</h3>
+                                <p>Wrap the tape measure around the fullest 
+                                part of each area, making sure you keep the tape 
+                                horizontal to the floor. This will give you the
+                                most accurate results.</p>
+                            <h3>Step 3</h3>
+                                <p>If you are between whole sizes, round up or down to the nearest
+                                whole number.</p>
+                        </div>
                 </div>
+                    
+            </div>
+
+
+            {
+                // large quote section 
+            }
+
+            <div class="quote">
+                <h2>"You can have anything you want in life if you dress for it."</h2>
+                <p>Edith Head</p>
             </div>
 
             {
@@ -134,32 +137,29 @@ export default function Main() {
                 <h2>Testimonials</h2>
                 <div className="testimonial-wrapper">
                     <div className="testimonial">
-                        <p>"Lorem ipsum dolor sit amet, consectetur 
+                        <img className="avatar" src={avatarOne} alt="testimonial"/>
+                        <p>Lorem ipsum dolor sit amet, consectetur 
                             adipiscing elit, sed do eiusmod tempor incididunt ut lab
-                            ore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                            commodo consequat. Duis aute irure dolor in dolor."
+                            ore et dolore magna aliqua.
                         </p>
-                        <p className="author">-Betty Sue</p>
+                        <p className="author">Betty Sue</p>
                     </div>
                     <div className="testimonial">
-                        <p>"Lorem ipsum dolor sit amet, consectetur 
+                        <img className="avatar" src={avatarTwo} alt="testimonial"/>
+                        <p>Lorem ipsum dolor sit amet, consectetur 
                             adipiscing elit, sed do eiusmod tempor incididunt ut lab
-                            ore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                            commodo consequat. Duis aute irure dolor in dolor."
+                            ore et dolore magna aliqua.
                         </p>
-                        <p className="author">-Tiffany White</p>
+                        <p className="author">Tiffany White</p>
                     </div>
                     <div className="testimonial">
+                        <img className="avatar" src={avatarThree} alt="testimonial"/>
                         <p>
-                            "Lorem ipsum dolor sit amet, consectetur 
+                            Lorem ipsum dolor sit amet, consectetur 
                             adipiscing elit, sed do eiusmod tempor incididunt ut lab
-                            ore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                            commodo consequat. Duis aute irure dolor in dolor."
+                            ore et dolore magna aliqua.
                         </p>
-                        <p className="author">-Rebecca Johnson</p>
+                        <p className="author">Rebecca Johnson</p>
                     </div>
                 </div>
             </div>
