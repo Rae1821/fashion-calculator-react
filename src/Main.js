@@ -1,13 +1,16 @@
 import pinkCalc from './images/pink-calculator.jpg'
 import appleTape from './images/tape-apple.jpg'
+import waistMeasure from './images/waist-measure.jpg'
 import avatarOne from './images/reviewer-1.jpg'
 import avatarTwo from './images/reviewer-2.jpg'
 import avatarThree from './images/reviewer-3.jpg'
 
-export default function Main() {
 
+import React from 'react'
 
-    return (
+const Main = () => {
+  return (
+    <div>
         <main>
             <div className="hero">     
                 <div className="hero--content">
@@ -29,80 +32,66 @@ export default function Main() {
                     </a>
                 </div>
             </div> 
-            
-            
-            { 
-                //Benefits section 
-            }
-            <div className="benefits">
-                <h2>The Benefits</h2>
-                    <div className="arrow-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 arrow-left">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 arrow-middle">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 arrow-right">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25" />
-                        </svg>
-                    </div>
-                <div className="benefits--container">
-                    <div className="benefit-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F2CB05" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                        <h3>Clarity</h3>
-                        <p>Have you ever bought something you saw an influencer on IG wearing only to realize it looks terrible on you? The reality is that clothes look different on different people because their shapes are not the same.</p>
-                    </div>
-
-                    <div className="benefit-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#088C7F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 22v-2"></path><path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path><path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path><path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m11 13.73-4 6.93"></path></svg>
-                        <h3>Positivity</h3>
-                        <p>As women, it can be hard not to look in the mirror and pick yourself apart. Knowing your body shape allows you to view your body as a whole, instead of just a bunch of parts you may or may not like.</p>
-                    </div>
-                    <div className="benefit-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F2B807" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                        <h3>Simplicity</h3>
-                        <p>You know all those clothes in the back of your closet you bought but never wear? Once you know your shape,  you'll know what items in the store will work for you and can start buying things you'll actually wear. How great is that?</p>
-                    </div>
-                </div>
-            </div>
 
             {
                 //How it works section 
             }
             <div id="works" className="works--container">
                 <div className="works-left">
-                <div className="works">
-                        <h2>How It Works</h2>
-                            <p class="works-p">The way the calculator takes in
-                            3 main body measurements: your <strong>shoulders</strong>, your <strong>waist</strong>, and your <strong>hips</strong>. The 
-                            calculator then compares these measurements against each other to determine
-                            the shape of your body! 
-                            <br />
-                            <br />
-                            It's important to remember that all body shapes are beautiful and unique and 
-                            this calculator is only here to help, it is not meant to be negative in any way.
-                            This is simply a tool to help you achieve your style goals! So grab your measurements 
-                            and let the calculator work its magic!✨
-                            </p>
-                    </div>
+                    <h2>How It Works</h2>
+                        <p className="works-p">The way the calculator takes in
+                        3 main body measurements: your <span>shoulders</span>, your <span>waist</span>, and your <span>hips</span>. The 
+                        calculator then compares these measurements against each other to determine
+                        the shape of your body! 
+                        <br />
+                        <br />
+                        It's important to remember that all body shapes are beautiful and unique and 
+                        this calculator is only here to help, it is not meant to be negative in any way.
+                        This is simply a tool to help you achieve your style goals! So grab your measurements 
+                        and let the calculator work its magic!✨
+                        </p>
+                    
                 </div>
                 <div className="works-right">
-                    <img className="calculator-img" src={pinkCalc} alt="calculator" />
+                <img className="apple-img" src={appleTape} alt="apple with measuring tape" />
+
                 </div>
+            </div>
+            
+            
+            { 
+                //Benefits section 
+            }
+            <div className="benefits--container">
+                
+                   <div className="benefits-img">
+                        <img className="calculator-img" src={pinkCalc} alt="calculator" />
+
+                   </div>
+
+                    <div className="benefits">
+                        <h2>The Benefits</h2>
+                            <h3>Clarity</h3>
+                                <p>Have you ever bought something you saw an influencer on IG wearing only to realize it looks terrible on you? The reality is that clothes look different on different people because their shapes are not the same.</p>
+                    
+                            <h3>Positivity</h3>
+                                <p>As women, it can be hard not to look in the mirror and pick yourself apart. Knowing your body shape allows you to view your body as a whole, instead of just a bunch of parts you may or may not like.</p>
+                
+                            <h3>Simplicity</h3>
+                                <p>You know all those clothes in the back of your closet you bought but never wear? Once you know your shape,  you'll know what items in the store will work for you and can start buying things you'll actually wear. How great is that?</p>
+                    </div>
             </div>
 
             {
-                //measuring tips section
+                //Measuring tips
             }
 
             <div className="measuring-tips">
-                <div className="tips-left">
-                    <img src={appleTape} alt="apple and measuring tape" />
+                <div className="tips-img">
+                    <img className="waist-img" src={waistMeasure} alt="waist measurement" />
                 </div>
-                <div className="tips-right">
-                    <h2>Measuring Tips</h2>
-                        <div className="tips">
+                    <div className="tips">
+                        <h2>Measuring Tips</h2>
                             <h3>Step 1</h3>
                                 <p>Look into a full length mirror or get someone 
                                 to assist you</p>
@@ -114,19 +103,7 @@ export default function Main() {
                             <h3>Step 3</h3>
                                 <p>If you are between whole sizes, round up or down to the nearest
                                 whole number.</p>
-                        </div>
-                </div>
-                    
-            </div>
-
-
-            {
-                // large quote section 
-            }
-
-            <div class="quote">
-                <h2>"You can have anything you want in life if you dress for it."</h2>
-                <p>Edith Head</p>
+                    </div>
             </div>
 
             {
@@ -163,6 +140,18 @@ export default function Main() {
                     </div>
                 </div>
             </div>
+           
+
+            {
+                // large quote section 
+            }
+
+            <div className="quote">
+                <h2>"You can have anything you want in life if you dress for it."</h2>
+                <p>Edith Head</p>
+            </div>
+
+          
 
 
 
@@ -170,11 +159,17 @@ export default function Main() {
 
 
 
-
-
-
-
-    )
-
-
+    </div>
+  )
 }
+
+export default Main
+
+
+   
+
+
+
+
+
+

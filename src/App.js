@@ -1,6 +1,7 @@
 
 import Main from './Main'
 import Calculator from './Calculator'
+import Footer from './Footer'
 
 
 import './App.css'
@@ -17,6 +18,7 @@ function App() {
       
       <Main />
      <Calculator />
+     <Footer />
    
     
       

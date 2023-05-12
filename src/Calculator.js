@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import blobAnimation from './images/blob-animation.svg'
+
 
 export default function Calculator() {
 
@@ -41,11 +41,9 @@ export default function Calculator() {
 
 
     return (
-        
+       
         <div className="calculator-container">
-            <h2>The Body Shape Calculator</h2>
-            <div className="calculator-form-container">
-                <img className="blob" src={blobAnimation} alt="blob background"/>
+            <h2>Let's Calculate Your Shape!</h2>
                 <div className="calculator-form" id="calculator-form">
                     <form onSubmit={handleSubmit}>
                         <h4>Enter Your Measurements</h4>
@@ -80,12 +78,7 @@ export default function Calculator() {
                     </form>
                    
                 </div>
-            </div>
-
-
-
         </div>
-
 
     )
 
