@@ -664,7 +664,7 @@ h1.title > span {
   width: 25px;
   height: 25px;
 
-  background-image: url('./arrow.svg');
+  background-image: url('./images/arrow.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
