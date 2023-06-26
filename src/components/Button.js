@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Button({text}) {
+function Button({type, text, handleClick}) {
   return (
 
-        <button >
+        <button 
+          className={type}
+          onClick={() => handleClick()}
+          >
             {text}
         </button>
     
