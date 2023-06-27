@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
 }
 
 :root {
@@ -44,6 +46,7 @@ p {
   margin: 0;
 }
 
+
 p {
   font-family: var(--ff-sans);
   line-height: 2;
@@ -53,102 +56,6 @@ img {
   width: 100%;
 }
 
-
-/***** Header Styles ******/
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.calculator {
-  height: 40px;
-  width: 40px;
-  color: var(--clr-green);
-}
-
-.nav--list--1,
-.nav--list--2 {
-  list-style-type: none;
-  display: flex;
-}
-
-.nav--list--1 {
-  padding-left: 0;
-  justify-content: space-around;
-  width: 200px;
-}
-
-.nav--list--2 {
-  justify-content: space-around;
-  width: 200px;
-  padding: 0;
-}
-
-.nav--list--1 > li,
-.nav--list--2 > li {
-  font-family: var(--ff-sans);
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.nav--list--1 > li > a,
-.nav--list--2 > li > a {
-  text-decoration: none;
-  color: var(--clr-black);
-}
-
-.nav--list--1 > li > a:hover {
-  text-decoration: underline;
-}
-
-.nav--list--2 .calc--link {
-  background-color: var(--clr-brightyellow);
-  border-radius: 10px;
-}
-
-.nav--list--2 .calc--link:hover {
-  background-color: var(--clr-yellow);
-}
-
-.nav--list--2 .calc--link > a {
-  padding-left: 1em;
-  padding-right: 1em;
-  font-size: 0.875rem;
-}
-
-.line--left {
-  height: 1px;
-  width: 25%;
-  position: relative;
-}
-
-.line--left--fill {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--clr-black);
-}
-
-.line--right {
-  height: 1px;
-  width: 25%;
-  position: relative;
-}
-
-.line--right--fill {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--clr-black);
-}
 
 /********** Hero Styles ************/
 
@@ -314,6 +221,9 @@ h1.title > span {
   display: none;
 }
 
+
+/* Desktop */
+
 @media (min-width: 900px) {
 
   .works--container {
@@ -437,6 +347,8 @@ h1.title > span {
   color: var(--clr-black);
 }
 
+/* Tablet */ 
+
 @media (min-width: 700px) {
  
   .measuring-tips-inner {
@@ -449,6 +361,7 @@ h1.title > span {
     grid-column: 1 / -1;
     grid-row: 1 / 1;
   }
+
   .waist-img {
     max-width: 60%;
     grid-column: 1 / -1;
@@ -458,6 +371,7 @@ h1.title > span {
 
 }
 
+/* Desktop */
 
 @media (min-width: 1100px) {
 
@@ -477,10 +391,7 @@ h1.title > span {
   .measuring-tips-inner > h2 {
     grid-column: 3 / 3;
     grid-row: 1 / 1;
-  }
-
-  .measuring-tips-inner > h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
  .measuring-tips-inner > h2 > span{
@@ -510,12 +421,12 @@ h1.title > span {
 
   .step-three {
     grid-column: 4 / 4;
-    grid-row: 3 / 3;
+    grid-row: 2 / 3;
   }
 
   .step-four {
     grid-column: 4 / 4;
-    grid-row: 2 / 2;
+    grid-row: 3 / 3;
   }
 
   .step-five {
@@ -557,6 +468,7 @@ h1.title > span {
   font-size: 2.25rem;
   color: var(--clr-black);
   margin-bottom: 1em;
+  text-align: center;
 }
 
 .testimonials-container > h2 > span {
@@ -687,7 +599,7 @@ h1.title > span {
 .faqs .faq.open .faq-answer {
   max-height: 100px;
   opacity: 1;
-  padding: 1em;
+  padding: 1em 0;
   text-align: left;
   font-family: var(--ff-sans);
   font-weight: 400;
@@ -721,7 +633,7 @@ h1.title > span {
 .get-started > h2 {
   font-family: var(--ff-sans);
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: var(--clr-black);
   margin-bottom: 1em;
   text-align: center;
@@ -767,6 +679,7 @@ button:active {
 
 .orange-btn {
   background-color: var(--clr-orange);
+  width: 200px;
 }
 
 /******** Calculator Styles *************/
@@ -814,12 +727,18 @@ form > h4 {
 input {
   width: 90%;
   border: none;
-  box-shadow: 3px 5px 10px #ccc;
+  /* box-shadow: 3px 5px 10px #ccc; */
   padding: 1em;
   border-radius: 10px;
   font-family: var(--ff-sans);
   text-align: center;
   font-weight: 700;
+  font-size: 16px;
+  --webkit-appearance: none;
+  --webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .25), inset 2px 2px 3px rgba(0, 0, 0, .2);
+  --moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .25), inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .25), inset 2px 2px 3px rgba(0, 0, 0, .2);
+
 }
 
 input:focus {
@@ -858,11 +777,9 @@ label {
 .results-container {
   width: 100%;
   max-width: 400px;
-  border: 3px solid var(--clr-light-green);
   margin: 0 auto 3em;
   border-radius: 10px;
   padding: 3em 1em;
-  box-shadow: 10px 10px var(--clr-light-green);
 }
 
 .results {
