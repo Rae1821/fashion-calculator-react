@@ -17,7 +17,7 @@ const [faqs, setFaqs] = useState([
   {
       question: 'Who is this calculator for?',
       answer: 'This is for anyone who wants to understand how to look and feel their best in the body they have and the first step is knowing your shape!',
-      open: true
+      open: false
   },
   {
       question: 'How do I use this information?',
