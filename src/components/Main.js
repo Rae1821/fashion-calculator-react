@@ -26,7 +26,7 @@ const Main = () => {
                      Knowing your body shape is the first step to looking better in your clothes. No more feeling overwhelemed while shopping for clothes and getting dressed will be a breeze.
                      Ready to get started?
                      </p>
-                     <p class="arrow-animation"><UseAnimations animation={arrowDown} size={64} strokeColor={'#17BFAE'} /></p>
+                     <UseAnimations animation={arrowDown} size={64} strokeColor={'#17BFAE'} />
                     {/* <p class="arrow-icon"><HiOutlineArrowDown style={{ fontSize: '2rem', backgroundColor: '#17BFAE' }}/></p> */}
                      {/* <a href="#calculator-form" alt="calculator link">
                         <button className="start--btn">

@@ -124,17 +124,37 @@ function handleStartOver() {
               secondaryCharacteristic={item.characteristics.secondary}
               additionalCharacteristic={item.characteristics.additional}
               handleStartOver={() => handleStartOver()}
-              
           />
         )
       } else {
         return console.log('error')
       }
-
-
     })
 
 
+    //fetch recommendations from API
+    async function fetchClothingApi() {
+     
+      const url = 'https://apidojo-forever21-v1.p.rapidapi.com/categories/v2/list';
+      const options = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': 'e8e61d9638mshf2c592bf697514fp18b971jsn02e0d86ad08e',
+          'X-RapidAPI-Host': 'apidojo-forever21-v1.p.rapidapi.com'
+        }
+      };
+      
+      try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result.ChildMenus);
+      } catch (error) {
+        console.error(error);
+      }
+
+    }
+
+    fetchClothingApi()
 
   return (
     <div className="App">
@@ -171,7 +191,6 @@ function handleStartOver() {
        {/* results */}
       {shapeResults === '' ? '' : results}
             
-  
       <Footer />
    
     </div>
