@@ -1,10 +1,11 @@
-import appleTape from '../images/tape-apple.jpg'
+// import appleTape from '../images/tape-apple.jpg'
 import waistMeasure from '../images/waist-measure.jpg'
 import avatarOne from '../images/reviewer-1.jpg'
 import avatarTwo from '../images/reviewer-2.jpg'
 import avatarThree from '../images/reviewer-3.jpg'
 import UseAnimations from 'react-useanimations'
 import arrowDown from 'react-useanimations/lib/arrowDown'
+import fashionImg from '../images/fashion-img.png'
 
 
 import React from 'react'
@@ -41,7 +42,8 @@ const Main = () => {
             }
             <div id="works" className="works--container">
                 <div className="works-left">
-                    <img className="apple-img" src={appleTape} alt="apple with measuring tape" />
+                    {/* <img className="apple-img" src={appleTape} alt="apple with measuring tape" /> */}
+                <img className="fashion-img" src={fashionImg} alt="fashion with measuring tape" />
                 </div>
                 <div className="works-right">
                     <h2>The Perks</h2>
