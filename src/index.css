@@ -70,6 +70,7 @@ img {
   background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url('./images/women-shapes.jpg');
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   padding: 4em 0;
 }
 
@@ -170,8 +171,8 @@ h1.title > span {
 .works--container {
   display: flex;
   flex-direction: column-reverse;
-  margin: 4em auto 3em;
-  padding: 1.5em;
+  margin: 4em auto 0;
+  padding: 1.5em 1.5em 0;
 }
 
 .works-right {
@@ -183,6 +184,10 @@ h1.title > span {
   margin-bottom: 2em;
   font-weight: 900;
   font-size: 2rem;
+}
+
+.works-left {
+  margin: 0 auto;
 }
 
 .perks-container {
@@ -221,6 +226,13 @@ h1.title > span {
   display: none;
 }
 
+.fashion-img {
+  width: 100%;
+  border-radius: 50%;
+  margin: 0;
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.2);
+}
+
 
 /* Desktop */
 
@@ -237,22 +249,30 @@ h1.title > span {
     padding: 1em;
   }
 
-  .apple-img {
+  /* .apple-img {
     display: block;
     grid-column: 1 / 1;
     grid-row: 1 / 2;
     border-radius: 8px;
     width: 100%;
-    
+  } */
+
+  .fashion-img {
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+    border-radius: 50%;
+    width: 100%;
+    margin: 0;
   }
  
   .works-right > h2 {
     text-align: left;
     font-size: 2.25rem;
     padding-top: .5em;
-    padding-left: .5em;
+    padding-left: 1em;
     margin-bottom: .75em;
   }
+
 
   .perks-container {
     display: grid;
@@ -312,6 +332,7 @@ h1.title > span {
   max-width: 100%;
   margin-bottom: 2em;
   border-radius: 5px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
 }
 
 .measuring-tips-inner > h2 {
@@ -512,7 +533,11 @@ h1.title > span {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
+}
+
+.author {
+  text-align: center;
 }
 
 /* Desktop */
@@ -524,7 +549,7 @@ h1.title > span {
   }
 
   .testimonial {
-    width: 20%;
+    max-width: 30%;
   }
 
   .testimonial > p {
@@ -534,6 +559,8 @@ h1.title > span {
   .testimonial:nth-child(2) {
     margin: 0 3em;
   }
+
+ 
 }
 
 /******** FAQ Styles *************/
@@ -598,7 +625,7 @@ h1.title > span {
 }
 
 .faqs .faq.open .faq-answer {
-  max-height: 100px;
+  max-height: 200px;
   opacity: 1;
   padding: 1em 0;
   text-align: left;
@@ -779,10 +806,14 @@ input:focus {
 
 .results-container {
   width: 100%;
-  max-width: 400px;
+  max-width: 1200px;
   margin: 0 auto 3em;
   border-radius: 10px;
   padding: 3em 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .results {
@@ -798,8 +829,23 @@ input:focus {
   text-align: center;
 }
 
+.results .confetti {
+  animation: rotate 2s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  50% {
+    transform: rotate(-45deg)
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
 .characteristics > li {
-  list-style: square;
   text-align: left;
   line-height: 1.75;
 }
@@ -820,11 +866,39 @@ input:focus {
   margin: 2em auto 0;
 }
 
+.sloth-container {
+  width: 60%;
+  margin-top: 3em;
+}
+
+.sloth-img {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+
+  .results-container {
+    flex-direction: row;
+  }
+
+  .results {
+    margin-right: 2em;
+  }
+
+  .sloth-container {
+    margin-left: 2em;
+    width: 20%;
+  }
+
+}
+
+
+
 /********** Footer Styles ************/
 
 .footer {
   background-color: var(--clr-black);
-  padding-top: 2em;
+  padding: 2em 0;
   color: var(--clr-white);
   font-size: 1rem;
   font-family: var(--ff-sans);

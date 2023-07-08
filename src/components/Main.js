@@ -117,26 +117,26 @@ const Main = () => {
                 <div className="testimonial-wrapper">
                     <div className="testimonial">
                         <img className="avatar" src={avatarOne} alt="testimonial author"/>
-                        <p>"Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt ut lab
-                            ore et dolore magna aliqua."
+                        <p>"I had no idea how important it is to know your body shape. Once 
+                        I found out what mine was, I was able to choose the items that were 
+                        perfect for my shape, no more guessing!"
                         </p>
                         <p className="author">Betty Sue</p>
                     </div>
                     <div className="testimonial">
                         <img className="avatar" src={avatarTwo} alt="testimonial author"/>
-                        <p>"Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt ut lab
-                            ore et dolore magna aliqua."
+                        <p>"So thankful I took a chance and tried this calculator. I will 
+                        admit, I was skeptical about yet another thing that promises to 
+                        improve your style but this knowledge is priceless!"
                         </p>
                         <p className="author">Tiffany White</p>
                     </div>
                     <div className="testimonial">
                         <img className="avatar" src={avatarThree} alt="testimonial author"/>
                         <p>
-                            "Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt ut lab
-                            ore et dolore magna aliqua."
+                            "Not only is the body calculator such an amazing tool, I love that 
+                            there is such a helpful chatbot ready to answer any potential styling 
+                            questions you might have!"
                         </p>
                         <p className="author">Rebecca Johnson</p>
                     </div>
